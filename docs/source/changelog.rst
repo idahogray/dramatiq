@@ -13,6 +13,10 @@ Changed
 ^^^^^^^
 
 * Upgraded prometheus_client to 0.2.x.
+* Bumped pika to version 0.12.  Because of this change, the
+  ``interrupt`` method on |Broker| and its usages within |Worker| have
+  been dropped.
+* There is no longer a max message delay.
 
 Fixed
 ^^^^^
@@ -40,6 +44,11 @@ Changed
 ^^^^^^^
 
 * |TimeLimitExceeded| is now a subclass of |Interrupt|.
+
+Fixed
+^^^^^
+
+* |StubBroker_join| and |Worker_join| are now more reliable.
 
 Fixed
 ^^^^^
